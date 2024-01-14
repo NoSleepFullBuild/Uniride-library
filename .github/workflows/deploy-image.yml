@@ -16,7 +16,7 @@ jobs:
       - name: Create .npmrc file
         run: |
           echo "@nosleepfullbuild:registry=https://npm.pkg.github.com/" >> .npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACCES_TOKEN }}" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}" >> .npmrc
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
@@ -28,4 +28,4 @@ jobs:
       - name: Publish package on NPM 📦
         run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.ACCES_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}

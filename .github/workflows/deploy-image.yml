@@ -1,0 +1,31 @@
+name: Create and publish a Docker image
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create .npmrc file
+        run: |
+          echo "@nosleepfullbuild:registry=https://npm.pkg.github.com/" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACCES_TOKEN }}" >> .npmrc
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@NoSleepFullBuild'
+      - name: Install dependencies and build 🔧
+        run: npm ci && npm run build
+      - name: Publish package on NPM 📦
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ACCES_TOKEN }}

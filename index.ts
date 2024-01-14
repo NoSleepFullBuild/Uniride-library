@@ -1,7 +1,4 @@
-// Exportations regroupées
-export * from './src/models/userModel';
 
-// Importations de modèles
 import authModel from './src/models/authModel';
 import userModel from './src/models/userModel';
 

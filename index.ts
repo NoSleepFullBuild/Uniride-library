@@ -1,10 +1,10 @@
 // Exportations regroupées
 export * from './postgres.utils';
-export * from './models/userModel';
+export * from './src/models/userModel';
 
 // Importations de modèles
-import authModel from './models/authModel';
-import userModel from './models/userModel';
+import authModel from './src/models/authModel';
+import userModel from './src/models/userModel';
 
 export { authModel, userModel };
-export { BaseEntity } from './entity/base.entity';
+export { BaseEntity } from './src/entity/base.entity';

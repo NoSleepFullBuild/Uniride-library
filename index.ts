@@ -1,5 +1,4 @@
 // Exportations regroupées
-export * from './postgres.utils';
 export * from './src/models/userModel';
 
 // Importations de modèles

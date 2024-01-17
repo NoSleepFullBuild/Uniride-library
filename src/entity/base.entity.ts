@@ -14,6 +14,6 @@ export class BaseEntity{
     @Column({ type: 'varchar', length: 255 })
     createdBy: string;
 
-    @Column({ type: 'varchar', length: 255, nullable: true })
+    @Column({ type: 'varchar', length: 255 })
     updatedBy: string;
 }

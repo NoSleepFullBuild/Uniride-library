@@ -27,13 +27,13 @@ __decorate([
     __metadata("design:type", Date)
 ], BaseEntity.prototype, "updatedAt", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: 'timestamp' }),
-    __metadata("design:type", Date)
-], BaseEntity.prototype, "updatedBy", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ type: 'timestamp' }),
-    __metadata("design:type", Date)
+    (0, typeorm_1.Column)({ type: 'varchar', length: 255 }),
+    __metadata("design:type", String)
 ], BaseEntity.prototype, "createdBy", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'varchar', length: 255, nullable: true }),
+    __metadata("design:type", String)
+], BaseEntity.prototype, "updatedBy", void 0);
 exports.BaseEntity = BaseEntity = __decorate([
     (0, typeorm_1.Entity)()
 ], BaseEntity);

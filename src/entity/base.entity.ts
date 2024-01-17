@@ -11,9 +11,9 @@ export class BaseEntity{
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     updatedAt: Date;
 
-    @Column({ type: 'timestamp' })
-    updatedBy: Date;
+    @Column({ type: 'varchar', length: 255 })
+    createdBy: string;
 
-    @Column({ type: 'timestamp' })
-    createdBy: Date;
+    @Column({ type: 'varchar', length: 255, nullable: true })
+    updatedBy: string;
 }

@@ -4,3 +4,4 @@ import userModel from './src/models/userModel';
 
 export { authModel, userModel };
 export { BaseEntity } from './src/entity/base.entity';
+

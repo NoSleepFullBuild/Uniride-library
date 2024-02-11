@@ -1,4 +1,4 @@
-import { checkoutEmail, checkoutPassword, checkoutPhoneNumber, checkoutRole, checkoutUsername } from '../middleware/authentification';
+import { checkoutEmail, checkoutPassword, checkoutPhoneNumber, checkoutRole, checkoutUsername } from './authentification';
 
 describe('Authentification', () => {
 

@@ -1,5 +1,5 @@
 import { Entity, Column } from 'typeorm';
-import { BaseEntity } from './base.entity';
+import { BaseEntity } from '../base/base.entity';
 
 @Entity()
 export class User extends BaseEntity{
@@ -14,15 +14,16 @@ export class User extends BaseEntity{
 
     @Column({ type: 'varchar', length: 255 })
     email: string;
-
+ 
     @Column({ type: 'varchar', length: 255 })
     role: string;
 
-    @Column({ type: 'varchar', length: 255, nullable: true })
+    @Column({ type: 'varchar', length: 255 })
     phoneNumber: string;
 
     @Column({ type: 'varchar', length: 255, nullable: true })
     vehicle: string | null;
+
+    @Column({ type: 'int', default: 0 })
+    rating: number;
 }
-
-

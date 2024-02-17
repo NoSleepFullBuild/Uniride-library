@@ -1,6 +1,6 @@
 {
   "name": "@nosleepfullbuild/uniride-library",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "type": "commonjs",
   "description": "A library for Uniride project, containing utility and funny code :D",
   "repository": {

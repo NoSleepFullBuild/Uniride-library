@@ -20,10 +20,10 @@ describe('Authentification', () => {
     });
     describe('checkoutPassword', () => {
         it('should return true for valid password', () => {
-            expect((0, authentification_1.checkoutPassword)('password1')).toBeTruthy();
+            expect((0, authentification_1.checkoutPassword)('Password123-')).toBeTruthy();
         });
         it('should return false for invalid password', () => {
-            expect((0, authentification_1.checkoutPassword)('pass')).toBeFalsy(); // Ne respecte pas la longueur minimale et les conditions
+            expect((0, authentification_1.checkoutPassword)('password1')).toBeFalsy(); // Ne respecte pas la longueur minimale et les conditions
         });
     });
     describe('checkoutPhoneNumber', () => {

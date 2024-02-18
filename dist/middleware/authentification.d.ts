@@ -4,3 +4,4 @@ export declare const checkoutPassword: (password: string) => boolean;
 export declare const checkoutPhoneNumber: (phoneNumber: string) => boolean;
 export declare const checkoutRole: (role: string) => boolean;
 export declare const checkoutVehicle: (vehicle: string) => boolean;
+export declare const checkoutName: (name: string) => boolean;

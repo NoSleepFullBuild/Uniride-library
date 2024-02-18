@@ -12,6 +12,9 @@ export class Auth extends BaseEntity {
   @Column()
   username: string;
 
+  @Column()
+  role: string;
+
   @Column({ length: 255 })
   password: string;
   

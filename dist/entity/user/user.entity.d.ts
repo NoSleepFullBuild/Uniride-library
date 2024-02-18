@@ -5,7 +5,6 @@ export declare class User extends BaseEntity {
     lastname: string;
     username: string;
     email: string;
-    role: string;
     phoneNumber: string;
     vehicle: string | null;
     rating: number;

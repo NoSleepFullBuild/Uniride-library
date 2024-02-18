@@ -27,6 +27,10 @@ __decorate([
     __metadata("design:type", String)
 ], Auth.prototype, "username", void 0);
 __decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Auth.prototype, "role", void 0);
+__decorate([
     (0, typeorm_1.Column)({ length: 255 }),
     __metadata("design:type", String)
 ], Auth.prototype, "password", void 0);

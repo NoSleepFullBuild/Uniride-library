@@ -20,9 +20,6 @@ export class User extends BaseEntity{
     email: string;
  
     @Column({ type: 'varchar', length: 255 })
-    role: string;
-
-    @Column({ type: 'varchar', length: 255 })
     phoneNumber: string;
 
     @Column({ type: 'varchar', length: 255, nullable: true })

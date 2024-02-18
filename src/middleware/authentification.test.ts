@@ -24,11 +24,11 @@ describe('Authentification', () => {
 
     describe('checkoutPassword', () => {
         it('should return true for valid password', () => {
-            expect(checkoutPassword('password1')).toBeTruthy();
+            expect(checkoutPassword('Password123-')).toBeTruthy();
         });
 
         it('should return false for invalid password', () => {
-            expect(checkoutPassword('pass')).toBeFalsy(); // Ne respecte pas la longueur minimale et les conditions
+            expect(checkoutPassword('password1')).toBeFalsy(); // Ne respecte pas la longueur minimale et les conditions
         });
     });
 
